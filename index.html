@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ menuOpen: false }" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stump Shredders</title>
+    <!-- Title + Description -->
+    <title>Stump Shredders | Prompt, Friendly Stump Grinding Service Sunshine Coast</title>
+    <meta name="description"
+        content="From palms to large eucalypt stumps, we can take care of all your stump-grinding needs safely and at very reasonable prices.
+
+We can offer such competitive pricing because our professional-grade Vermeer machinery is both highly efficient and meticulously maintained. This means every job is completed quickly, safely, and to a consistently high standard — saving you time and money while keeping your property clean and tidy." />
+
+    <!-- Canonical URL
+    <link rel="canonical" href="{{ site_url }}" /> -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Stump Shredders | Prompt, Friendly Stump Grinding Service Sunshine Coast" />
+    <meta property="og:description"
+        content="From palms to large eucalypt stumps, we can take care of all your stump-grinding needs safely and at very reasonable prices.
+
+We can offer such competitive pricing because our professional-grade Vermeer machinery is both highly efficient and meticulously maintained. This means every job is completed quickly, safely, and to a consistently high standard — saving you time and money while keeping your property clean and tidy." />
+    <meta property="og:image" content="images/stump-hero.jpg" />
+    <!-- <meta property="og:url" content="{{ site_url }}" /> -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="hero_image" />
+    <meta name="twitter:title" content="Stump Shredders | Prompt, Friendly Stump Grinding Service Sunshine Coast" />
+    <meta name="twitter:description"
+        content="From palms to large eucalypt stumps, we can take care of all your stump-grinding needs safely and at very reasonable prices.
+
+We can offer such competitive pricing because our professional-grade Vermeer machinery is both highly efficient and meticulously maintained. This means every job is completed quickly, safely, and to a consistently high standard — saving you time and money while keeping your property clean and tidy." />
+    <meta name="twitter:image" content="images/stump-hero.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#104d31" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- Schema.org / LocalBusiness JSON-LD -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Stump Shredders",
+            "description": "From palms to large eucalypt stumps, we can take care of all your stump-grinding needs safely and at very reasonable prices.
+
+We can offer such competitive pricing because our professional-grade Vermeer machinery is both highly efficient and meticulously maintained. This means every job is completed quickly, safely, and to a consistently high standard — saving you time and money while keeping your property clean and tidy.",
+            "telephone": "0423 320 105",
+            "email": "nealspropertymaintenance@gmail.com",
+            "address": "Sunshine Coast, QLD",
+            "url": "{{ site_url }}",
+            "image": "images/stump-hero.jpg"
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;700&family=Rubik:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- 🌈 Global color variables -->
+    <style>
+        body {
+            font-family: 'Rubik',
+                sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Rubik',
+                sans-serif;
+        }
+
+        a {
+            color: var(--color-primary);
+        }
+
+        a:hover {
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(0.9);
+        }
+
+        .btn-outline {
+            background-color: #fff;
+            color: var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background-color: #f9fafb;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header.has-logo .header-business-name {
+            display: none;
+        }
+
+        header.has-no-logo .header-business-logo {
+            display: none;
+        }
+
+        .slider {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slide {
+            scroll-snap-align: start;
+            flex: 0 0 46%;
+            margin-right: 2%;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                flex: 0 0 85%;
+                margin-right: 5%;
+            }
+        }
+    </style>
+</head>
+
+<body
+    style="--color-primary: #104d31; --color-bg: #fff; --color-text: #22332b; --color-footer: #fff; --color-footer-text: #22332b">
+
+    <!-- Header -->
+    <header style="background: var(--color-bg); color: var(--color-text);" class="has-no-logo fixed w-full shadow z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-6">
+            <img class="header-business-logo h-auto max-w-[150px]" src="" alt="Stump Shredders" />
+            <h1 class="header-business-name font-bold text-xl">
+                Stump Shredders
+            </h1>
+
+            <nav class="space-x-6 text-base font-medium hidden lg:block">
+                <a href="#about" class="hover:text-[var(--color-primary)]">About</a>
+                <a href="#services" class="hover:text-[var(--color-primary)]">Services</a>
+                <a href="#experience" class="hover:text-[var(--color-primary)]">Experience</a>
+                <a href="#testimonials" class="hover:text-[var(--color-primary)]">Testimonials</a>
+                <a href="#contact" class="hover:text-[var(--color-primary)]">Contact</a>
+                <a href="tel:0423 320 105"
+                    class="inline-flex items-center space-x-2 btn-primary font-semibold px-4 py-2 rounded-md shadow transition">
+                    <svg width="16px" height="16px" viewBox="0 0 24 24" stroke-width="1" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M4.06343 1.25L7.81435 1.25C8.12672 1.25 8.40638 1.44361 8.51634 1.73599L9.97178 5.60588C10.02 5.73398 10.0322 5.87281 10.0071 6.00735L9.2778 9.91931C10.1742 12.0273 11.6548 13.4439 14.1104 14.7146L17.9754 13.9657C18.1126 13.9391 18.2545 13.9514 18.3851 14.0012L22.2669 15.4804C22.5577 15.5912 22.7498 15.87 22.7498 16.1812L22.7498 19.7655C22.7498 21.391 21.3176 22.7101 19.6424 22.3456C16.5888 21.6811 10.9315 19.9923 6.9695 16.0303C3.17436 12.2352 1.90282 6.99252 1.47478 4.15869C1.23055 2.54172 2.52735 1.25 4.06343 1.25Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <span>0423 320 105</span>
+                </a>
+            </nav>
+
+            <button @click="menuOpen = !menuOpen" class="lg:hidden text-gray-700 focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path x-show="!menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16" />
+                    <path x-show="menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div x-show="menuOpen" x-transition class="md:hidden border-t border-gray-200 shadow bg-[var(--color-bg)]">
+            <nav class="flex flex-col p-4 space-y-3 text-sm font-medium">
+                <a href="#about" @click="menuOpen=false"
+                    class="text-[var(--color-text)]  hover:text-[var(--color-primary)]">About</a>
+                <a href="#services" @click="menuOpen=false" class="hover:text-[var(--color-primary)]">Services</a>
+                <a href="#experience" @click="menuOpen=false" class="hover:text-[var(--color-primary)]">Experience</a>
+                <a href="#testimonials" @click="menuOpen=false"
+                    class="hover:text-[var(--color-primary)]">Testimonials</a>
+                <a href="#contact" @click="menuOpen=false" class="hover:text-[var(--color-primary)]">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home"
+        class="relative h-[50vh] md:h-[75vh] flex items-center justify-center text-center text-white bg-cover bg-center bg-fixed"
+        style="background-image: url('images/stump-hero.jpg');">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-snug md:leading-snug">Prompt, Friendly Stump Grinding
+                Service</h1>
+            <a href="#contact" class="btn-primary px-6 py-3 rounded-md text-lg font-semibold">Get a Quick Quote</a>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-10 md:py-20 fade-in" style="background: var(--color-bg); color: var(--color-text);">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-4" style="color: var(--color-primary);">Stump Grinders Sunshine Coast
+                </h2>
+                <p class="mb-6">From palms to large eucalypt stumps, we can take care of all your stump-grinding needs
+                    safely and at very reasonable prices.
+
+                    We can offer such competitive pricing because our professional-grade Vermeer machinery is both
+                    highly efficient and meticulously maintained. This means every job is completed quickly, safely, and
+                    to a consistently high standard — saving you time and money while keeping your property clean and
+                    tidy.</p>
+            </div>
+            <img src="images/stump-about(1).jpg" alt="About us" class="rounded-lg shadow-md" loading="lazy" />
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-10 md:py-20 text-center fade-in bg-gray-50" style="color: var(--color-text);">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10" style="color: var(--color-primary);">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-10 mb-10">
+                <div
+                    class="rounded-lg shadow hover:shadow-lg transition p-6 bg-[var(--color-bg)] text-[var(--color-text)]">
+                    <div class="mb-4 text-[var(--color-primary)] flex justify-center"
+                        style="color: var(--color-primary)">
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="60px" height="60px" viewBox="0 0 24 24"
+                            stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#1f2937">
+                            <path d="M2 8L11.7317 3.13416C11.9006 3.04971 12.0994 3.0497 12.2683 3.13416L22 8"
+                                stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M20 11V19C20 20.1046 19.1046 21 18 21H6C4.89543 21 4 20.1046 4 19V11"
+                                stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class=" text-xl font-semibold mb-2">Residential & Commercial Stump Grinding</h3>
+                    <p>No job too big or small — we handle single stumps through to large property clear-outs.</p>
+                </div>
+                <div
+                    class="rounded-lg shadow hover:shadow-lg transition p-6 bg-[var(--color-bg)] text-[var(--color-text)]">
+                    <div class="mb-4 text-[var(--color-primary)] flex justify-center"
+                        style="color: var(--color-primary)">
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="60px" height="60px" viewBox="0 0 24 24"
+                            stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#1f2937">
+                            <path d="M12 22L12 14M12 10L12 14M12 14L16 12" stroke="#1f2937" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M17 7C17 4.23858 14.7614 2 12 2C9.23858 2 7 4.23858 7 7" stroke="#1f2937"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M12 18H7.5C4.46243 18 2 15.5376 2 12.5C2 9.46243 4.46243 7 7.5 7H9"
+                                stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M12 18H16.5C19.5376 18 22 15.5376 22 12.5C22 9.63102 19.8033 7.27508 17 7.02246"
+                                stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Palm & Eucalypt Removal</h3>
+                    <p>Safe removal of all types of stumps including deep-rooted palms and large eucalypts.</p>
+                </div>
+                <div
+                    class="rounded-lg shadow hover:shadow-lg transition p-6 bg-[var(--color-bg)] text-[var(--color-text)]">
+                    <div class="mb-4 text-[var(--color-primary)] flex justify-center"
+                        style="color: var(--color-primary)">
+                        <?xml version="1.0" encoding="UTF-8"?><svg width="60px" height="60px" viewBox="0 0 24 24"
+                            stroke-width="1.5" fill="none" xmlns="http://www.w3.org/2000/svg" color="#1f2937">
+                            <path
+                                d="M7 17C8.10457 17 9 16.1046 9 15C9 13.8954 8.10457 13 7 13C5.89543 13 5 13.8954 5 15C5 16.1046 5.89543 17 7 17Z"
+                                stroke="#1f2937" stroke-width="1.5" stroke-miterlimit="1.5" stroke-linecap="round"
+                                stroke-linejoin="round"></path>
+                            <path
+                                d="M14 15V4.6C14 4.26863 13.7314 4 13.4 4H2.6C2.26863 4 2 4.26863 2 4.6V14.4C2 14.7314 2.26863 15 2.6 15H4.65"
+                                stroke="#1f2937" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path d="M13.9998 15H9.0498" stroke="#1f2937" stroke-width="1.5" stroke-linecap="round">
+                            </path>
+                            <path
+                                d="M14 7H19.6101C19.8472 7 20.0621 7.13964 20.1584 7.35632L21.4483 10.2586C21.4824 10.3354 21.5 10.4184 21.5 10.5023V12"
+                                stroke="#1f2937" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path d="M17 23C17 23 17.9 19.8824 20 18" stroke="#1f2937" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path
+                                d="M19.8022 21.4245L19.6677 21.4372C17.9758 21.5961 16.469 20.3541 16.3021 18.663C16.1353 16.9719 17.3715 15.4721 19.0634 15.3131L22.049 15.0326C22.2406 15.0146 22.4111 15.1552 22.43 15.3466L22.6847 17.9276C22.8589 19.6929 21.5683 21.2586 19.8022 21.4245Z"
+                                stroke="#1f2937" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Site Preparation</h3>
+                    <p>Clear space for fencing, pools, or landscaping — we’ll grind and level your site fast.</p>
+                </div>
+            </div>
+            <a href="#contact" class="btn-primary px-6 py-3 rounded-md text-md font-semibold inline-block">Get a Quick
+                Quote</a>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="py-10 md:py-20 fade-in"
+        style="background: var(--color-bg); color: var(--color-text);">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+            <img loading="lazy" src="images/digital-marketing-agency-ntwrk-g39p1kDjvSY-unsplash.jpg" alt="Experience"
+                class="rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-3xl font-bold mb-4" style="color: var(--color-primary);">Our Experience</h2>
+                <p class="mb-4">With over 10 years of experience in garden maintenance and tree work, offering stump
+                    grinding has been a natural progression. Whether you're putting in a fence, pool, or just cleaning
+                    up — the stumps must go!</p>
+                <ul class="space-y-2">
+                    <ul>
+                        <li>✔️ Over 10 years industry experience</li>
+                        <li>✔️ Professional Vermeer machinery</li>
+                        <li>✔️ Safe, efficient, and tidy results</li>
+                        <li>✔️ Affordable pricing across the Sunshine Coast</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 text-center fade-in" style="background: var(--color-primary); color: #fff;">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4">Got some stumps that need removing?</h2>
+            <p class="text-lg mb-6">Send a photo of your Stump for a Quick Quote today!</p>
+            <a href="#contact" class="btn-outline font-semibold px-8 py-3 rounded-md">Get a Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-10 md:py-20 fade-in"
+        style="background: var(--color-bg); color: var(--color-text);">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-10 text-center" style="color: var(--color-primary);">What Our Clients Say
+            </h2>
+
+            <div class="flex overflow-x-auto slider pb-4">
+
+                <div class="slide bg-white rounded-lg shadow p-6 mr-4 flex-shrink-0 w-80">
+                    <p class="italic text-gray-700 mb-3">“I recently had Nial from Stump Stredders I definitely
+                        recommend he did a fantastic job 100% happy 😃”</p>
+                    <p class="font-semibold" style="color: var(--color-primary)">- Carley Nicholson - Nambour</p>
+                </div>
+                <div class="slide bg-white rounded-lg shadow p-6 mr-4 flex-shrink-0 w-80">
+                    <p class="italic text-gray-700 mb-3">“Neal is professional, punctual, and always reliable. Highly
+                        recommended.”</p>
+                    <p class="font-semibold" style="color: var(--color-primary)">- Josh Wardle - Maroochydore</p>
+                </div>
+                <div class="slide bg-white rounded-lg shadow p-6 mr-4 flex-shrink-0 w-80">
+                    <p class="italic text-gray-700 mb-3">“Exceptional service from start to finish. Highly recommend
+                        Stump Shredders”</p>
+                    <p class="font-semibold" style="color: var(--color-primary)">- Michelle Abuzzo - Maroochydore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-50 text-white fade-in">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4 text-[var(--color-primary)]">Get in Touch</h2>
+                <p class="text-[var(--color-text)] max-w-2xl mx-auto">
+                    Have a question or need a quote? Reach out using the details below — we’re happy to help.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <!-- Phone -->
+                <a href="tel:0423 320 105" class="block bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center
+          hover:text-white transition-colors duration-200 hover:scale-105 transform transition-transform duration-200">
+
+                    <svg class="w-8 h-8 mb-3 text-white group-hover:text-white" fill="none" stroke="currentColor"
+                        stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 5H16M16 5L19 2M16 5L19 8" stroke="currentColor" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path
+                            d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        </path>
+                    </svg>
+                    <p class="text-lg font-semibold mb-1">Phone</p>
+                    <p>0423 320 105</p>
+                </a>
+
+                <!-- Email -->
+                <a href="mailto:nealspropertymaintenance@gmail.com" class="block bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center
+          hover:text-white transition-colors duration-200 hover:scale-102 transform transition-transform duration-200">
+                    <svg class="w-8 h-8 mb-3 text-white group-hover:text-white" fill="none" stroke="currentColor"
+                        stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 9L13.5 12L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M3 13.5H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M1 10.5H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path
+                            d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                    <p class="text-lg font-semibold mb-1">Email</p>
+                    <p>nealspropertymaintenance@gmail.com</p>
+                </a>
+
+                <!-- Address -->
+                <div class="bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center justify-center">
+                    <svg class="w-8 h-8 mb-3 text-white" fill="none" stroke="currentColor" stroke-width="1.5"
+                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M12 2.25c5.385 0 9.75 4.365 9.75 9.75S17.385 21.75 12 21.75 2.25 17.385 2.25 12 6.615 2.25 12 2.25z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5v4.5l3 3" />
+                    </svg>
+                    <p class="text-lg font-semibold mb-1">Servicing</p>
+                    <p class="max-w-xs">Sunshine Coast, QLD</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 md:py-16" style="background: var(--color-footer); color: var(--color-footer-text);">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+            <div class="md:col-span-2">
+                <h3 class="text-xl font-bold mb-4">Stump Shredders</h3>
+                <p>From Palms to large Eucalypt stumps, we can take care of all your stump-grinding needs safely and at
+                    very reasonable prices.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-3">Contact</h4>
+                <p>
+                    Phone:
+                    <a href="tel:0423 320 105" style="color: var(--color-primary);" class="hover:underline">0423 320
+                        105</a>
+                </p>
+                <p>
+                    Email:
+                    <a href="mailto:nealspropertymaintenance@gmail.com" style="color: var(--color-primary);"
+                        class="hover:underline">nealspropertymaintenance@gmail.com</a>
+                </p>
+                <p>Service Area: Sunshine Coast, QLD</p>
+            </div>
+        </div>
+        <div class="text-center text-sm mt-10 border-t border-gray-700 pt-6">© 2025 Stump Shredders | ABN 86 308
+            844 323 | <span>Made with ❤️ by <a href="https://tradespark.app" target="_blank"
+                    class="text-[var(--color-primary)] hover:underline">TradeSpark</a></span></div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <a href="tel:0423 320 105" class="fixed bottom-5 right-5 btn-primary shadow-lg rounded-full p-4 md:hidden z-50"
+        aria-label="Call Now">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.518 4.554a1 1 0 01-.272 1.045l-2.12 2.12a16.001 16.001 0 007.07 7.07l2.12-2.12a1 1 0 011.045-.272l4.554 1.518a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C10.477 21 3 13.523 3 4V5z" />
+        </svg>
+    </a>
+
+    <script>
+        const visObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.2 });
+        document.querySelectorAll('.fade-in').forEach(el => visObserver.observe(el));
+
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+        const navObserver = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute("id");
+                    const link = document.querySelector(`nav a[href="#${id}"]`);
+                    if (!link) return; // 🔒 skip if no matching link
+
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove("text-[var(--color-primary)]"));
+                        link.classList.add("text-[var(--color-primary)]");
+                    }
+                });
+            },
+            { rootMargin: "-50% 0px -50% 0px", threshold: 0 }
+        );
+
+        sections.forEach(section => navObserver.observe(section));     
+    </script>
+</body>
+
+</html>
